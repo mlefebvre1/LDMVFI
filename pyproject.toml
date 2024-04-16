@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-diffusion"
+version = "0.0.1"
+description = "Video Frame Interpolation with Latent Diffusion Models"
+requires-python = ">=3.9"
+dependencies = [
+    "omegaconf",
+    "einops",
+    "pytorch-lightning<2",
+    "taming-transformers @ git+https://github.com/mlefebvre1/taming-transformers.git@master",
+    "clip",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
